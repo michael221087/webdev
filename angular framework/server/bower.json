@@ -1,0 +1,17 @@
+{
+  "name": "sample",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": "1.8.3",
+    "angular": "~1.0.5",
+    "requirejs": "~2.1.5",
+    "modernizr": "~2.6.2",
+    "underscore": "~1.4.4",
+    "jquery-masonry": "~2.1.08"
+  }
+}

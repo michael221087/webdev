@@ -1,0 +1,59 @@
+<div ng-cloak id="home" ng-class="{countEnd:countEnd}">
+	<div class="introduction">
+
+		<a class="logo" href="javascript:;"><img src="images/home/logo.png" /></a>
+		<a class="fb" href="" ng-click="$root.shareToF();"><img src="images/home/fb.png" /></a>
+		<a class="wtsapp" href="" ng-click="$root.shareToWTS();"><img src="images/home/wtsapp.png" /></a>
+		
+		<div class="txt1">
+			<img ng-hide="countEnd" src="images/home/txt1.png" />
+			<img ng-show="countEnd" src="images/home/txt1-opened.png" />
+		</div>
+
+		<div class="counter" ng-hide="countEnd">
+			<div class="counter-box">
+				<span class="box1 num-{{days0}}"></span>
+				<span class="box2 num-{{days1}}"></span>
+				<img class="symbol symbol0" src="images/home/counter-symbol.png" />
+				<span class="box3 num-{{hours0}}"></span>
+				<span class="box4 num-{{hours1}}"></span>
+				<img class="symbol symbol1" src="images/home/counter-symbol.png" />
+				<span class="box5 num-{{minutes0}}"></span>
+				<span class="box6 num-{{minutes1}}"></span>
+				<img class="symbol symbol2" src="images/home/counter-symbol.png" />
+				<span class="box7 num-{{seconds0}}"></span>
+				<span class="box8 num-{{seconds1}}"></span>
+			</div>
+		</div>
+
+		<div class="txt2"><img src="images/home/txt2.png" /></div>
+		<a href="" ng-click="toForm();" class="start"></a>
+		<a class="btn-tnc" href="" ng-click="showTips();$root.scrollTo(0);"><img src="images/game/how-to-play.png" alt="" /></a>
+		<div class="shoe"><img src="images/home/shoe.png" /></div>
+		<div class="dumbbell"><img src="images/home/dumbbell.png" /></div>
+	</div> 
+
+	<div class="location">
+		<div class="border"></div>
+		<div class="location"><img src="images/home/location.png" /></div>
+		<a href="https://www.google.com.hk/maps/search/%E6%81%86%E9%9A%86%E4%B8%AD%E5%BF%83/@22.2800794,114.1849973,19z/data=!3m1!4b1" target="_blank" class="map"><img src="images/home/map.jpg" /></a>
+		<a href="https://www.google.com.hk/maps/search/%E6%81%86%E9%9A%86%E4%B8%AD%E5%BF%83/@22.2800794,114.1849973,19z/data=!3m1!4b1" target="_blank" class="address"><img src="images/home/cwb.png" /></a>
+	</div>
+
+	<div class="shareto">
+		<div class="txt1"><img src="images/home/txt3.png" /></div>
+		<a href="" class="fb2" ng-click="$root.shareToF();"></a>
+		<a href="" class="wtsapp2" ng-click="$root.shareToWTS();"></a>
+	</div>
+
+	<div class="footer">
+		<ul>
+			<li><a href="" ng-click="showTips();$root.scrollTo(0);">遊戲玩法</a></li>
+			<li><a href="" open-tnc ng-click="$root.scrollTo(0);">條款及細則</a></li>
+			<li>© 2016 adidas Group</li>
+		</ul>
+	</div>
+
+
+	
+</div>

@@ -1,0 +1,42 @@
+@import "sass/common";
+@import "sass/css3";
+@import "sass/animation";
+@import "sass/loading-bar";
+// @import "sass/tnc";
+
+@include global-reset;
+@include angular-reset;
+
+
+$primary-color:#00aff6; // blue
+
+body { font-size:20px; line-height:26px; font-family:Arial, Helvetica, "SimHei", "Microsoft JhengHei", "STHeiti", "Ms PGothic", "PMingLiu"; color: #fff; background-color:#000; position: relative;}
+
+
+@include keyframe(arrow){
+	0% { @include transform(translate(0px,0px)); }
+  100% { @include transform(translate(0px,-15px)); }
+}
+
+@include keyframe(flash){
+	0% {  opacity:0; }
+  100% { opacity:1; }
+}
+
+
+
+
+.cssanimations {
+	// .preloader, .popup, #tnc, #container { @include animation(fadeIn 0.8s); }
+	// .ng-view>div { @include animation(fadeIn 0.6s);}
+
+	// .arrow { @include animation(arrow 0.4s ease 0.5s infinite alternate);}
+	// .mark { @include animation(flash 0.4s ease 0.5s infinite alternate);}
+	
+
+
+}
+
+
+
+

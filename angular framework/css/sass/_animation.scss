@@ -1,0 +1,107 @@
+@import "common";
+
+@include keyframe(characterAnimation) {
+	0%{ @include transform(scale(1.03, 1)); }
+	100%{ @include transform(scale(1, 1.03)); }
+}
+@include keyframe(stamp) {
+	0%{ @include transform(scale(2, 2)); opacity:0; }
+	100%{ @include transform(scale(1, 1)); opacity:1; }
+}
+@include keyframe(bubbleAnimation) {
+	0%{ @include transform(translate(0px,0px) scale(1, 1)); }
+	100%{ @include transform(translate(-3px,3px) scale(1.03, 1.03)); }
+}
+@include keyframe(sparkle) {
+	0%{ opacity : 0.5; }
+	100%{ opacity : 1; }
+}
+@include keyframe(shake) {
+	0%{ @include transform(rotate(0deg)); }
+	3%{ @include transform(rotate(20deg)); }
+	6%{ @include transform(rotate(-20deg)); }
+	9%{ @include transform(rotate(20deg)); }
+	12%{ @include transform(rotate(-20deg)); }
+	15%{ @include transform(rotate(0deg)); }
+	100%{ @include transform(rotate(0deg)); }
+}
+@include keyframe(compass) {
+	0%{ @include transform(rotate(60deg)); }
+	12%{ @include transform(rotate(-40deg)); }
+	24%{ @include transform(rotate(-90deg)); }
+	36%{ @include transform(rotate(110deg)); }
+	48%{ @include transform(rotate(30deg)); }
+	60%{ @include transform(rotate(80deg)); }
+	72%{ @include transform(rotate(-70deg)); }
+	84%{ @include transform(rotate(10deg)); }
+	96%{ @include transform(rotate(-40deg)); }
+}
+@include keyframe(fadeIn) {
+	0%{ opacity : 0; }
+	100%{ opacity : 1; }
+}
+@include keyframe(slideInLeft) {
+	0% { @include transform(translate(60px,0px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+@include keyframe(slideInRight) {
+	0% { @include transform(translate(-60px,0px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+@include keyframe(slideInBottom){
+	0% { @include transform(translate(0px,20px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+@include keyframe(slideInBottom2){
+	0% { @include transform(translate(0px,314px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+@include keyframe(slideInTop){
+	0% { @include transform(translate(0px,-20px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+
+
+@include keyframe(slideInTopLeft){
+	0% { @include transform(translate(-30px,-30px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+
+@include keyframe(slideInTopRight){
+	0% { @include transform(translate(30px,-30px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+
+@include keyframe(slideLeft) {
+	0% { @include transform(translate(0px,0px)); }
+  50% { @include transform(translate(15px,0px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+@include keyframe(slideRight) {
+	0% { @include transform(translate(0px,0px)); }
+  50% { @include transform(translate(-15px,0px)); }
+  100% { @include transform(translate(0px,0px)); }
+}
+
+@include keyframe(bgToBottom){
+	0% { background-position: 0 0;}
+  100% { background-position: 0 bottom;}
+}
+
+@include keyframe(rotate) {
+	0%{ @include transform(rotate(10deg)); }
+	50%{ @include transform(rotate(-20deg)); }
+	100%{ @include transform(rotate(10deg)); }
+}
+
+@mixin angular-animation{
+	.ng-leave {
+		@include animation(fadeOut 0.2s ease);
+	}
+	.ng-hide-add {
+		@include animation(fadeOut 0.3s ease);
+	}
+	.ng-enter, .ng-hide-add, .ng-hide-remove {
+		display:block!important;
+	}
+}
